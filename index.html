@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Speech to text Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Speech-to-text converter</h1>
+
+<div class="content" id="result">
+  <!-- TODO create segments that can be individually corrected by clicking them and re-converting.
+        Instead of continuously listening, do it only while user holds the button or a segment is selected -->
+</div>
+
+<div class="actionbar">
+  <button onclick="toggleMicrophone()" class="btn btn-recording">Start Recording</button>
+  <button onclick="resetText()" class="btn btn-reset-text">Reset Text</button>
+<!--  <button onclick="makeLastSegmentAQuestion('?')" class="btn">Add Questionmark</button>-->
+  <input onchange="resizeText()" type="range" min="10" max="200" name="font-size" id="font-size-slider" value="32" aria-label="change font size"/>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
